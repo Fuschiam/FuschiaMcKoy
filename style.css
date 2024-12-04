@@ -15,12 +15,31 @@ body {
     animation: move-stars 120s linear infinite; /* Infinite animation */
 }
 
+/* Name Section */
+.name-section h1 {
+    color: #B200B2;
+    font-size: 4rem; /* Adjusted for mobile */
+    font-family: 'Cursive', 'Arial', 'Helvetica', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 2px #B200B2, 0 0 4px #B200B2, 0 0 6px #B200B2;
+}
+
+.name-section h2 {
+    color: #D6A1D6;
+    font-size: 2rem; /* Adjusted for mobile */
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /* Navigation Button Styling */
 .nav-buttons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Align buttons to the start */
-    gap: 8px; /* Adjust gap */
+    justify-content: center;
+    gap: 8px; /* Adjusted gap */
+    margin-top: 20px;
     width: 100%; /* Ensure full width */
     overflow-x: auto; /* Allow horizontal scrolling if needed */
     box-sizing: border-box; /* Include padding/border in width */
@@ -30,15 +49,32 @@ button {
     background-color: #FFF; /* White */
     color: #6A0DAD; /* Deep purple */
     border: 2px solid #6A0DAD;
-    padding: 8px 12px; /* Adjusted padding */
+    padding: 8px 15px; /* Adjusted padding */
     border-radius: 5px;
     cursor: pointer;
-    font-size: 12px; /* Adjusted for readability */
+    font-size: 14px; /* Adjusted for readability */
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     box-sizing: border-box; /* Include padding/border in width */
-    flex: 1 1 auto; /* Allows buttons to grow and shrink */
-    min-width: 100px; /* Set a minimum width */
+}
+
+button:hover {
+    background-color: #6A0DAD; /* Deep purple */
+    color: #FFF;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(106, 13, 173, 0.4);
+}
+
+/* Content Section Styling */
+.content-section {
+    padding: 15px; /* Reduced padding for mobile */
+    margin: 15px 0;
+    width: 90%; /* Adjusted for smaller screens */
+    max-width: 800px; /* Set a max width for better readability */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+    border-radius: 10px;
+    color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Design */
@@ -52,14 +88,14 @@ button {
     }
 
     .nav-buttons {
-        flex-direction: row; /* Keep buttons in a single row */
-        gap: 4px; /* Reduce gap for better fit */
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 6px; /* Adjusted gap for smaller screens */
     }
 
     button {
-        font-size: 10px; /* Smaller button text */
-        padding: 6px 10px; /* Adjust padding */
-        min-width: 80px; /* Smaller minimum width */
+        font-size: 12px; /* Adjust button text */
+        padding: 6px 12px; /* Adjust padding */
     }
 
     .content-section {
