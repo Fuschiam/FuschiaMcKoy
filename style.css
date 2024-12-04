@@ -38,20 +38,24 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* Smaller gap */
+    gap: 8px; /* Adjusted gap */
     margin-top: 20px;
+    width: 100%; /* Ensure full width */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    box-sizing: border-box; /* Include padding/border in width */
 }
 
 button {
     background-color: #FFF; /* White */
     color: #6A0DAD; /* Deep purple */
     border: 2px solid #6A0DAD;
-    padding: 10px 20px;
+    padding: 8px 15px; /* Adjusted padding */
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px; /* Adjusted for readability */
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Include padding/border in width */
 }
 
 button:hover {
@@ -86,11 +90,12 @@ button:hover {
     .nav-buttons {
         flex-direction: column; /* Stack buttons vertically */
         align-items: center;
+        gap: 6px; /* Adjusted gap for smaller screens */
     }
 
     button {
         font-size: 12px; /* Adjust button text */
-        padding: 8px 15px; /* Adjust padding */
+        padding: 6px 12px; /* Adjust padding */
     }
 
     .content-section {
