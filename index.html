@@ -1,40 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fuschia's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <!-- Name Section -->
+    <section class="name-section">
+        <h1>Fuschia McKoy</h1>
+        <h2>Data Scientist</h2>
+    </section>
+
+    <!-- Navigation Buttons -->
+    <nav class="nav-buttons">
+        <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('skills')">Skills</button>
+        <button onclick="showSection('about')">About</button>
+        <button onclick="showSection('work-history')">Work History</button>
+        <button onclick="showSection('contact')">Contact</button>
+        <button onclick="window.open('https://github.com/fuschiam', '_blank')">GitHub</button>
     </nav>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Analytical thinker with a passion for uncovering insights through data.</p>
-  </section>
+    <!-- Content Sections -->
+    <section id="projects" class="content-section" style="display: none;">
+        <h2>Projects</h2>
+        <p>Explore my projects where I apply data science skills to real-world problems, ranging from predictive analytics to machine learning models. Key projects include:</p>
+        <ul>
+            <li><strong>Airbnb NYC Analysis:</strong> A detailed analysis of New York Airbnb rental data.</li>
+            <li><strong>Colon Cancer Detection:</strong> Image classification for histology slide analysis.</li>
+        </ul>
+    </section>
 
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <p>projects here</p>
-  </section>
+    <section id="skills" class="content-section" style="display: none;">
+        <h2>Skills</h2>
+        <p>I have developed a wide range of skills, including:</p>
+        <ul>
+            <li>Programming in Python and SQL</li>
+            <li>Machine Learning and Predictive Modeling</li>
+            <li>Data Visualization using Matplotlib and Seaborn</li>
+            <li>Statistical Analysis and Data Cleaning</li>
+        </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: fuschiamckoy@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/fuschia-mckoy/" target="_blank">Fuschia McKoy</a></p>
-    <p>GitHub: <a href="https://github.com/Fuschiam" target="_blank">Fuschia McKoy</a></p>
-  </section>
+    <section id="about" class="content-section" style="display: none;">
+        <h2>About Me</h2>
+        <p>My journey into data science began with a strong foundation in mathematics and a career in finance, where I developed my analytical and problem-solving skills. As a Trading Analyst, I provided strategic insights to clients, which sparked my passion for working with data to uncover meaningful patterns and trends.</p>
+        <p>Driven by curiosity and a desire to make an impact, I transitioned into data science, where I specialize in data analysis, visualization, and predictive modeling. I enjoy turning complex datasets into actionable insights using tools like <strong>scikit-learn</strong> for machine learning and <strong>matplotlib</strong> for clear, compelling visualizations.</p>
+        <p>My unique combination of finance expertise and technical skills allows me to approach problems from multiple perspectives, whether solving business challenges or driving data-driven decision-making. I’m excited to continue using data science to create innovative solutions and contribute to meaningful projects.</p>
+    </section>
 
-  <footer>
-    <p>© 2024 Fuschia McKoy. All rights reserved.</p>
-  </footer>
+    <section id="work-history" class="content-section" style="display: none;">
+        <h2>Work History</h2>
+        <p>My professional journey includes roles that have sharpened my analytical and problem-solving abilities:</p>
+        <ul>
+            <li><strong>Investment Advisor:</strong> Guided clients in financial planning and investment strategies, leveraging data-driven recommendations.</li>
+            <li><strong>Trading Analyst:</strong> Executed stock and options trades, advised on margin strategies, and optimized trade execution through data analysis.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="content-section" style="display: none;">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaborations, inquiries, or job opportunities:</p>
+        <p>Email: <a href="mailto:fuschiamckoy@gmail.com">fuschiamckoy@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/fuschia-mckoy" target="_blank">linkedin.com/in/fuschia-mckoy</a></p>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the selected section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
+
