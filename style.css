@@ -18,7 +18,7 @@ body {
 /* Name Section */
 .name-section h1 {
     color: #B200B2;
-    font-size: 6rem;
+    font-size: 4rem; /* Adjusted for mobile */
     font-family: 'Cursive', 'Arial', 'Helvetica', sans-serif;
     text-align: center;
     margin-bottom: 20px;
@@ -27,7 +27,7 @@ body {
 
 .name-section h2 {
     color: #D6A1D6;
-    font-size: 3rem;
+    font-size: 2rem; /* Adjusted for mobile */
     font-family: 'Brush Script MT', cursive;
     text-align: center;
     margin-bottom: 20px;
@@ -38,7 +38,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px; /* Smaller gap */
     margin-top: 20px;
 }
 
@@ -49,7 +49,7 @@ button {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px; /* Adjusted for readability */
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -63,8 +63,8 @@ button:hover {
 
 /* Content Section Styling */
 .content-section {
-    padding: 20px;
-    margin: 20px 0;
+    padding: 15px; /* Reduced padding for mobile */
+    margin: 15px 0;
     width: 90%; /* Adjusted for smaller screens */
     max-width: 800px; /* Set a max width for better readability */
     background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
@@ -76,11 +76,11 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .name-section h1 {
-        font-size: 4rem;
+        font-size: 3rem; /* Smaller font size for mobile */
     }
 
     .name-section h2 {
-        font-size: 2rem;
+        font-size: 1.5rem; /* Adjusted for mobile */
     }
 
     .nav-buttons {
@@ -89,38 +89,12 @@ button:hover {
     }
 
     button {
-        font-size: 14px;
-        padding: 8px 16px;
+        font-size: 12px; /* Adjust button text */
+        padding: 8px 15px; /* Adjust padding */
     }
 
     .content-section {
-        padding: 15px;
-        width: 95%;
+        padding: 10px; /* Smaller padding */
+        margin: 10px 0;
     }
-}
-
-@media (max-width: 480px) {
-    .name-section h1 {
-        font-size: 3rem;
-    }
-
-    .name-section h2 {
-        font-size: 1.5rem;
-    }
-
-    button {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-
-    .content-section {
-        padding: 10px;
-        width: 100%;
-    }
-}
-
-/* Animation for moving stars */
-@keyframes move-stars {
-    0% { background-position: 0 0; }
-    100% { background-position: 1000px 1000px; }
 }
