@@ -34,32 +34,29 @@ body {
 }
 
 /* Navigation Button Styling */
-.nav-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-button {
-    background-color: #FFF; /* White */
-    color: #6A0DAD; /* Deep purple */
-    border: 2px solid #6A0DAD;
-    padding: 10px 20px;
+.nav-buttons button {
+    background: linear-gradient(to bottom, #cc99ff 0%, #ff99ff 89%);
+    color: #fff; /* White text for contrast */
+    border: 2px solid transparent; /* Transparent border */
+    padding: 8px 15px; /* Adjust padding as needed */
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px; /* Adjust font size for readability */
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Include padding/border in width */
+    background-clip: border-box; /* Ensure gradient does not extend outside the border */
 }
 
-button:hover {
-    background-color: #6A0DAD; /* Deep purple */
-    color: #FFF;
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(106, 13, 173, 0.4);
+/* Hover effect for buttons */
+.nav-buttons button:hover {
+    background: linear-gradient(to bottom, #ff99ff 0%, #cc99ff 89%);
+    color: #fff; /* Maintain white text */
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow for hover effect */
 }
+
+
 
 /* Content Section Styling */
 .content-section {
