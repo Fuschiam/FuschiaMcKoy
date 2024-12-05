@@ -24,14 +24,25 @@ body {
     text-align: center; /* Center text */
     width: 100%; /* Make sure it's the full width of the parent */
 }
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at its original position */
+        opacity: 1;
+    }
+}
 
-/* Name Styling */
 .name-section h1 {
-    font-family: 'Poppins', sans-serif; /* Use the same font */
+    font-family: 'Poppins', sans-serif;
     color: #FF00FF;
     text-shadow: 0 0 5px #FF0080, 0 0 10px #FF00FF; /* Toned down glow */
-    font-size: 4rem; /* Adjust font size as needed */
+    font-size: 4rem; /* Adjust font size */
+    animation: slide-in-right 3s ease-out; /* Apply slide-in animation with a slower duration */
 }
+
 
 /* Name Section Styling */
 .name-section {
