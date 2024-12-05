@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Updated to use Poppins font */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,48 +15,72 @@ body {
     animation: move-stars 120s linear infinite; /* Infinite animation */
 }
 
-/* Name Section */
-.name-section h1 {
-    color: #B200B2;
-    font-size: 6rem;
-    font-family: 'Cursive', 'Arial', 'Helvetica', sans-serif;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 0 0 2px #B200B2, 0 0 4px #B200B2, 0 0 6px #B200B2;
+/* Name Section Styling */
+.name-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text */
+    width: 100%; /* Make sure it's the full width of the parent */
 }
 
-.name-section h2 {
-    color: #D6A1D6;
-    font-size: 3rem;
-    font-family: 'Brush Script MT', cursive;
-    text-align: center;
-    margin-bottom: 20px;
+/* Name Styling */
+.name-section h1 {
+    font-family: 'Poppins', sans-serif; /* Use the same font */
+    color: #FF00FF;
+    text-shadow: 0 0 5px #FF0080, 0 0 10px #FF00FF; /* Toned down glow */
+    font-size: 4rem; /* Adjust font size as needed */
 }
+
+/* Name Section Styling */
+.name-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text */
+    width: 100%; /* Full width of the parent */
+    margin-bottom: 20px; /* Add space below the name section */
+}
+
+/* Subtitle Styling */
+.name-section h2 {
+    font-family: 'Poppins', sans-serif; /* Use the same font */
+    background: linear-gradient(to bottom, #ff9900 0%, #ffcc00 100%); /* Gradient color */
+    background-clip: text; /* Make the gradient apply to text */
+    -webkit-background-clip: text; /* For Safari */
+    color: transparent; /* Make the original color transparent */
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #cccccc; /* Toned down glow */
+    font-size: 1.8rem; /* Adjust font size */
+    margin: 0 0 20px 0; /* Add margin below the subtitle */
+}
+
+
 
 /* Navigation Button Styling */
-.nav-buttons button {
-    background: linear-gradient(to bottom, #cc99ff 0%, #ff99ff 89%);
-    color: #fff; /* White text for contrast */
-    border: 2px solid transparent; /* Transparent border */
-    padding: 8px 15px; /* Adjust padding as needed */
+button {
+    background: transparent; /* No background */
+    color: #ffffff; /* White text */
+    border: 2px solid #ffffff; /* White outline */
+    padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Adjust font size for readability */
+    font-family: 'Poppins', sans-serif; /* Use the same font */
+    font-size: 12px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box; /* Include padding/border in width */
-    background-clip: border-box; /* Ensure gradient does not extend outside the border */
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    min-width: 100px;
 }
 
-/* Hover effect for buttons */
-.nav-buttons button:hover {
-    background: linear-gradient(to bottom, #ff99ff 0%, #cc99ff 89%);
-    color: #fff; /* Maintain white text */
-    transform: scale(1.05); /* Slightly increase size on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow for hover effect */
+/* Button hover styling */
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background on hover */
+    border-color: #FF00FF; /* Highlight the border color on hover */
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.5);
 }
-
-
 
 /* Content Section Styling */
 .content-section {
@@ -120,4 +144,10 @@ body {
 @keyframes move-stars {
     0% { background-position: 0 0; }
     100% { background-position: 1000px 1000px; }
+}
+
+/* Animation for glitter effect */
+@keyframes glitter {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
